@@ -45,3 +45,24 @@ function strings() //reverses text, then checks for palendromes
     document.getElementById("palindromeResult").innerHTML=palindrome+" ≠ "+joinedPalindrome+": This is not a Palindrome."    
     }
 }
+
+function playMusic()
+{
+    mysound=new sound("cowboy-theme.mp3");
+    mysound.play();
+    document.getElementById("image").src="dance.gif"
+}
+
+function sound(src)
+{
+    this.sound=document.createElement("audio");
+    this.sound.src=src;
+    this.play=function(){
+        this.sound.play();
+    }
+}
+
+function stopMusic()
+{
+    window.location.reload();
+}
